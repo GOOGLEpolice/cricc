@@ -10,10 +10,12 @@ public class OppCardSnap : MonoBehaviour
         if (other.gameObject.tag == "cubee" || other.gameObject.tag == "OppBatsman" || other.gameObject.tag == "OppBowler")
         {
             other.transform.localPosition = this.transform.localPosition;
-            other.gameObject.GetComponent<PlayerStats>();
+            GameManager.instance.oppCardStats = other.gameObject.GetComponent<CardStats>();
 
 
         }
+
+        GameManager.instance.oppBattlePoint = other.gameObject;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -24,11 +26,13 @@ public class OppCardSnap : MonoBehaviour
         if (other.gameObject.tag == "OppBatsman")
         {
             GameManager.instance.oppBatsman= true;
+            GameManager.instance.cardSelected = true;
         }
 
         if (other.gameObject.tag == "OppBowler")
         {
             GameManager.instance.oppBowler = true;
+            GameManager.instance.cardSelected = true;
         }
 
     }

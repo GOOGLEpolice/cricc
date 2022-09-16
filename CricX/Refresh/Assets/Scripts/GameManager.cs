@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -22,10 +23,11 @@ public class GameManager : MonoBehaviour
     #endregion;
 
     public GameObject battlePoint;
+    public GameObject oppBattlePoint;
     //public PlayerStats playerStats;
     public CardStats cardStats;
     //public CardSnap cardSnap;
-    //public OppCardSnap oppCardSnap;
+    public CardStats oppCardStats;
     public int score;
     public bool set;
     public bool chase;
@@ -105,10 +107,10 @@ public class GameManager : MonoBehaviour
                 
             }
 
-            /*if (oppBatsman)
+            if (oppBatsman)
             {
                 oppScore = oppScore + score;
-            }*/
+            }
 
             if (playerBowler)
             {
@@ -116,15 +118,31 @@ public class GameManager : MonoBehaviour
                 {
                     oppScore = oppScore - score;
                 }
+
+                if (playerTurn == -1)
+                {
+                    if (oppBatsman)
+                    {
+                        oppBattlePoint.SetActive(false);
+                    }
+                }
             }
 
-            /*if (oppBowler)
+            if (oppBowler)
             {
                 for (mScore = 0; mScore >= 0;)
                 {
                     mScore = mScore - score;
                 }
-            }*/
+
+                if (playerTurn == -1)
+                {
+                    if (playerBatsman)
+                    {
+                        battlePoint.SetActive(false);
+                    }
+                }
+            }
 
             Debug.Log("My Score is -" + mScore + "and opponent score is -" + oppScore);
         }
@@ -149,6 +167,14 @@ public class GameManager : MonoBehaviour
                 {
                     oppScore = oppScore + score;
                 }
+
+                if (playerTurn == -1)
+                {
+                    if (oppBatsman)
+                    {
+                        oppBattlePoint.SetActive(false);
+                    }
+                }
             }
 
             if (oppBowler)
@@ -156,6 +182,14 @@ public class GameManager : MonoBehaviour
                 for (mScore = 100; mScore < 100;)
                 {
                     mScore = mScore + score;
+                }
+
+                if (playerTurn == -1)
+                {
+                    if (playerBowler)
+                    {
+                        battlePoint.SetActive(false);
+                    }
                 }
             }
 

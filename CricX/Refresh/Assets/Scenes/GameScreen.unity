@@ -198,7 +198,7 @@ PrefabInstance:
     - target: {fileID: 6690739677671170169, guid: ca35b1e2c5adad54f840433ebcd34959,
         type: 3}
       propertyPath: m_TagString
-      value: OppBatsman
+      value: OppBowler
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca35b1e2c5adad54f840433ebcd34959, type: 3}
@@ -217,7 +217,7 @@ PrefabInstance:
     - target: {fileID: 4913845293617479281, guid: 85259856bcbfc644fbb6fc82c7d48180,
         type: 3}
       propertyPath: m_TagString
-      value: OppBatsman
+      value: OppBowler
       objectReference: {fileID: 0}
     - target: {fileID: 5255724488371906172, guid: 85259856bcbfc644fbb6fc82c7d48180,
         type: 3}
@@ -505,6 +505,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &442615065 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6690739677671170169, guid: ca35b1e2c5adad54f840433ebcd34959,
+    type: 3}
+  m_PrefabInstance: {fileID: 208547262}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &442615068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442615065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 988f8f426939065499994210f549f03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats: {fileID: 11400000, guid: 8a2a6c5d19597274fbc69f068b19686f, type: 2}
 --- !u!1001 &458508948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -859,6 +878,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &773876149 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6690739677671170169, guid: ca35b1e2c5adad54f840433ebcd34959,
+    type: 3}
+  m_PrefabInstance: {fileID: 1767541433}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &773876152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773876149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 988f8f426939065499994210f549f03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats: {fileID: 0}
 --- !u!1 &997584070
 GameObject:
   m_ObjectHideFlags: 0
@@ -1388,6 +1426,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f710b1307d071143adceb95c5790225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1250585952 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4913845293617479281, guid: 85259856bcbfc644fbb6fc82c7d48180,
+    type: 3}
+  m_PrefabInstance: {fileID: 265741135}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1250585955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250585952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 988f8f426939065499994210f549f03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats: {fileID: 11400000, guid: f7430cdd02d275f49b63f5204b6162c3, type: 2}
 --- !u!1 &1294966019
 GameObject:
   m_ObjectHideFlags: 0
@@ -1419,7 +1476,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSelected: 0
   battlePoint: {fileID: 0}
+  oppBattlePoint: {fileID: 0}
   cardStats: {fileID: 0}
+  oppCardStats: {fileID: 0}
   score: 0
   set: 1
   chase: 0

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e83b7a7a7f378f24bad079b8c3fa79cf, type: 3}
-  m_Name: Tendulkar
+  m_Name: Arshdeep
   m_EditorClassIdentifier: 
   PlayerCards: {fileID: 0}
   playerBC: 0
-  ball1: -1
+  ball1: 0
   ball2: 0
   ball3: 0
   ball4: 0
