@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
             //playerStats.playerBC += 1;
             Cases();
             score = playerTurn;
-            pBallCount = cardStats.playerStats.playerBC;
+            //pBallCount = cardStats.playerStats.playerBC;
             if (cardStats.playerStats.playerBC >= 6)
             {
                 cardStats.gameObject.SetActive(false);
@@ -119,28 +119,24 @@ public class GameManager : MonoBehaviour
                     oppScore = oppScore - score;
                 }
 
-                if (playerTurn == -1)
-                {
-                    if (oppBatsman)
-                    {
-                        oppBattlePoint.SetActive(false);
-                    }
+                if (playerTurn == -1 && oppBatsman)
+                {   
+                    oppBattlePoint.SetActive(false);   
+                    oppBatsman = false;
                 }
             }
 
             if (oppBowler)
             {
-                for (mScore = 0; mScore >= 0;)
+                for (mScore = 0; mScore <= 0;)
                 {
                     mScore = mScore - score;
                 }
 
-                if (playerTurn == -1)
+                if (playerTurn == -1 && playerBatsman)
                 {
-                    if (playerBatsman)
-                    {
-                        battlePoint.SetActive(false);
-                    }
+                    battlePoint.SetActive(false);
+                    playerBatsman = false;
                 }
             }
 
@@ -168,12 +164,10 @@ public class GameManager : MonoBehaviour
                     oppScore = oppScore + score;
                 }
 
-                if (playerTurn == -1)
+                if (playerTurn == -1 && oppBatsman)
                 {
-                    if (oppBatsman)
-                    {
-                        oppBattlePoint.SetActive(false);
-                    }
+                    oppBattlePoint.SetActive(false);
+                    oppBatsman = false;
                 }
             }
 
@@ -184,12 +178,10 @@ public class GameManager : MonoBehaviour
                     mScore = mScore + score;
                 }
 
-                if (playerTurn == -1)
+                if (playerTurn == -1 && playerBatsman)
                 {
-                    if (playerBowler)
-                    {
-                        battlePoint.SetActive(false);
-                    }
+                    battlePoint.SetActive(false);
+                    playerBatsman = false;
                 }
             }
 
