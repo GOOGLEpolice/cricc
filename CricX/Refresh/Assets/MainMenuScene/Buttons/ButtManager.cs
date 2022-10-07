@@ -17,7 +17,7 @@ public class ButtManager : MonoBehaviour
 
     public void OnInven()
     {
-        SceneManager.LoadScene(sceneName: "InventorySceen");
+        SceneManager.LoadScene(sceneName: "InvSceneTemp");
     }
 
     public void OnQuit()
